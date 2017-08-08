@@ -1,0 +1,169 @@
+header {
+  width: 100%;
+  text-align: center;
+  margin-top: 7%;
+  font-family: $body-font;
+
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    margin-top: 0px;
+    font-size: 24px;
+  }
+}
+
+.header-logo {
+  width: 70%;
+}
+
+// CUSTOMIZING BOOTSTRAP NAVBAR START
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: $body-font;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: $near-black;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+  a {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: $near-white;
+  }
+}
+
+.icon-bar {
+  color: $near-white !important;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+   text-decoration: none;
+   color: $gold;
+   background-color: $near-black;
+ }
+
+ .navbar-default .navbar-nav > li > a {
+   color: $near-white;
+  }
+
+#navlist i {
+  font-size: 20px;
+}
+
+.navbar-header {
+  background-color: $near-black;
+  color: $near-white;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  color: $gold;
+  background-color: $near-black; /*Change rollover cell color here*/
+}
+// CUSTOMIZING BOOTSTRAP NAVBAR END
+
+.header-img-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  text-align: left;
+  margin-top: 20px;
+  overflow-y: hidden;
+  img {
+    width: 100%;
+  }
+}
+
+.header-text-container {
+  position: absolute;
+  top: 0%;
+  height: 100%;
+  width: 50%;
+  background: white;
+  opacity: 0.7;
+}
+
+.header-text {
+  margin: 50px 30px 0px 30px;
+  p {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+}
+
+.contact-links {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
+  a {
+    color: $near-black;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 30px
+  }
+  a:hover {
+    color: $gold;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header-text {
+    p {
+      font-size: 20px;
+    }
+  }
+  .header-logo {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .header-img-container {
+    height: 500px;
+    img {
+      height: 500px;
+    }
+  }
+  .header-text-container {
+    position: absolute;
+    background: white;
+    opacity: 0.8;
+  }
+}
+
+// Text box is centered up to 600px wide
+@media screen and (max-width: 650px) {
+  .header-img-container {
+    height: 480px;
+  }
+
+  .header-text-container {
+    position: absolute;
+    height: 90%;
+    margin-top: 5%;
+    width: 90%;
+    margin-left: 5%;
+    background: white;
+    opacity: 0.8;
+  }
+
+  .header-text p {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .header-text {
+    margin-top: 15%;
+    p {
+      font-size: 18px;
+    }
+  }
+}

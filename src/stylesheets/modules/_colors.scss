@@ -1,0 +1,16 @@
+// Color Variables
+$gold: #d18f03;
+$light-gray: #7e7e7b;
+$dark-gray: #353531;
+$near-black: #1f1f1f;
+$near-white: #f4f4f1;
+
+// Color Assignments
+$background-color: white;
+$primary-text-color: $near-black;
+
+// Common Styles
+body {
+  color: $primary-text-color;
+  background-color: $background-color;
+}

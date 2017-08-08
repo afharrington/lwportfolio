@@ -1,0 +1,143 @@
+#portfolio {
+  width: 100%;
+  padding-top: 10px;
+}
+
+.filters {
+  padding-top: 20px;
+  list-style-type: none;
+  text-align: center;
+  padding-left: 0px;
+  font-family: $body-font;
+  cursor: pointer;
+
+  li {
+    text-decoration: none;
+    background-color: $light-gray;
+    width: 120px;
+    padding: 5px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+
+  li.active {
+    background-color: $gold;
+  }
+}
+
+.project {
+  display: none;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  overflow: visible;
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    width: 100%;
+    border-bottom: 1px solid $gold;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+}
+
+.project-image {
+  padding-top: 10px;
+  display: inline-block;
+  width: 35%;
+  min-width: 250px;
+  height: 100%;
+  margin-right: 10px;
+  padding-right: 15px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.project-label {
+  color: #7C7C7C;
+}
+
+.project-detail {
+  padding-top: 10px;
+  display: inline-block;
+  width: 55%;
+  height: 100%;
+  h3 {
+    margin-top: 0px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  p {
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+}
+
+.course-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: space-between;
+}
+
+#parsons {
+  width: 200px;
+  margin-left: 10%;
+}
+
+.course {
+  width: 500px;
+  margin: 5px 5px 20px 5px;
+  padding: 10px;
+  background-color: $near-white;
+}
+
+.course-title {
+  width: 100%;
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+}
+
+.course-description {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1130px) {
+  .course {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project-detail {
+    width: 100%;
+  }
+  .course {
+    width: 100%;
+  }
+  #parsons {
+    margin-left: 0px;
+  }
+}
