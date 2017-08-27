@@ -29,7 +29,7 @@ header {
   width: 70%; }
 
 nav {
-  text-align: center;
+  text-align: right;
   margin-bottom: 20px;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -146,13 +146,12 @@ nav {
   text-align: center;
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 100px;
+  font-size: 24px;
+  line-height: 60px;
+  margin-top: 50px;
   margin-bottom: 25px;
-  height: 30px;
+  height: 60px;
   color: white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   background-color: #7e7e7b;
   background: #7e7e7b;
   /* fallback for old browsers */
@@ -161,38 +160,41 @@ nav {
   background: linear-gradient(to right, #7e7e7b, #f4f4f1);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
+.sticky-filter-container {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 50px; }
+
 #portfolio {
   width: 100%;
   padding-top: 10px; }
 
-.filters {
-  padding-top: 20px;
-  list-style-type: none;
+.sticky-filter-container {
   text-align: center;
-  padding-left: 0px;
+  width: 100%;
+  z-index: 100;
+  padding: 10px; }
+
+button.filter {
+  width: 120px;
+  height: 30px;
+  margin: 10px;
   font-family: "Roboto", sans-serif;
-  cursor: pointer; }
-  .filters li {
-    text-decoration: none;
-    border: 2px solid #7e7e7b;
-    border-radius: 1000px;
-    background-color: white;
-    width: 120px;
-    padding: 5px;
-    margin-right: 25px;
-    margin-bottom: 10px;
-    display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px;
-    color: #7e7e7b;
-    font-size: 18px; }
-  .filters li.active {
-    background-color: #d18f03;
-    color: white;
-    border: none; }
+  cursor: pointer;
+  border: 2px solid #7e7e7b;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #7e7e7b;
+  background-color: white;
+  outline: 0; }
+
+button.active {
+  background-color: #d18f03;
+  border: none;
+  color: white; }
 
 .project {
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   width: 90%;
   margin-left: 5%;
@@ -272,6 +274,13 @@ nav {
   .course {
     width: 45%; } }
 
+@media screen and (max-width: 775px) {
+  button.filter {
+    width: 90px;
+    height: 25px;
+    margin: 5px;
+    font-size: 14px; } }
+
 @media screen and (max-width: 600px) {
   .project-detail {
     width: 100%; }
@@ -279,6 +288,12 @@ nav {
     width: 100%; }
   #parsons {
     margin-left: 0px; } }
+
+@media screen and (max-width: 320px) {
+  button.filter {
+    width: 70px;
+    height: 25px;
+    font-size: 12px; } }
 
 html, body, h1, p {
   margin: 0;

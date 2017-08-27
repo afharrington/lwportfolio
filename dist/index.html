@@ -5,53 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="styles.css" rel="stylesheet"> 
+    <link href="styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Yanone+Kaffeesatz:300,400" rel="stylesheet">
     <script src="https://use.fontawesome.com/332bc1d84f.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span><i class="fa fa-bars" aria-hidden="true"></i></span>
-        </button>
-      </div>
-
-      <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="mailto:hello@conceptsociety.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
-          <li><a href="https://www.instagram.com/lwong10/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/lwong10/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-    <header>
-      <img class="header-logo" src="./img/conceptsociety.jpg" alt="concept society logo"/>
-      <div class="header-img-container">
-        <img src="./img/background.jpg" alt="background city image"/>
-        <div class="header-text-container">
-          <div class="header-text">
-            <p>My name is Lauren Wong, and I’m a creative strategist with a background in brand strategy, design research, and innovation.</p>
-            <p>My practice, called Concept Society, specializes in bringing a future-forward perspective to all kinds of creative work. I’m currently an innovation consultant and part-time design faculty in New York.</p>
-          </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span><i class="fa fa-bars" aria-hidden="true"></i></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#" data-scroll="home">Home</a></li>
+            <li><a href="#portfolio" data-scroll="portfolio" class="portfolio-link" data-scroll="portfolio">Portfolio</a></li>
+            <li><a href="mailto:hello@conceptsociety.com"><i class="fa fa-envelope"></i></a></li>
+            <li><a href="https://www.instagram.com/lwong10/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/lwong10/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+          </ul>
         </div>
       </div>
-    </header>
-    <section id="portfolio">
+  </nav>
+    <section id="home" data-anchor="home">
+      <header>
+        <img class="header-logo" src="./img/conceptsociety.jpg" alt="concept society logo"/>
+        <div class="header-img-container">
+          <img src="./img/background.jpg" alt="background city image"/>
+          <div class="header-text-container">
+            <div class="header-text">
+              <p>My name is Lauren Wong, and I’m a creative strategist with a background in brand strategy, design research, and innovation.</p>
+              <p>My practice, called Concept Society, specializes in bringing a future-forward perspective to all kinds of creative work. I’m currently an innovation consultant and part-time design faculty in New York.</p>
+            </div>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <section id="portfolio" data-anchor="portfolio">
       <h1 class="section-header">Portfolio</h1>
-      <ul class="filters" id="projects">
-        <li href="#portfolio" class="filter active" id="strategy">Strategy</li>
-        <li href="#portfolio" class="filter" id="innovation">Innovation</li>
-        <li href="#portfolio" class="filter" id="research">Research</li>
-        <li href="#portfolio" class="filter" id="design">Design</li>
-      </ul>
-      <div class="portfolio-items">
-        <article class="project strategy">
+      <div class="sticky-filter-container">
+        <button class="active filter" id="all">All</button>
+        <button class="filter" id="strategy">Strategy</button>
+        <button class="filter" id="innovation">Innovation</button>
+        <button class="filter" id="research">Research</button>
+        <button class="filter" id="design">Design</button>
+      </div>
+
+      <div id="portfolio-projects">
+        <div class="project strategy innovation">
           <h2>‘Hooking Up Grandma’s House’ Creative Campaign (2016)</h2>
           <div class="project-image">
             <img src="./img/grandma.png"></img>
@@ -62,8 +66,20 @@
             <h3 class="category">Strategy</h3>
             <p>XFINITY wanted to show how technology can bring multiple generations together over the holidays, particularly grandparents and grandkids. Adweek, Creativity Online, and The Drum covered the campaign that ran across TV, social, and digital.</p>
           </div>
-        </article>
-        <article class="project strategy innovation">
+        </div>
+        <div class="project strategy">
+          <h2>‘Hooking Up Grandma’s House’ Creative Campaign (2016)</h2>
+          <div class="project-image">
+            <img src="./img/grandma.png"></img>
+          </div>
+          <div class="project-detail">
+            <h3><span class="project-label">Client:</span> XFINITY</h3>
+            <h3><span class="project-label">Role:</span> Strategist at 72andSunny</h3>
+            <h3 class="category">Strategy</h3>
+            <p>XFINITY wanted to show how technology can bring multiple generations together over the holidays, particularly grandparents and grandkids. Adweek, Creativity Online, and The Drum covered the campaign that ran across TV, social, and digital.</p>
+          </div>
+        </div>
+        <div class="project strategy innovation">
           <h2>‘ANTIdiaRy’ Creative Campaign (2015)</h2>
           <div class="project-image">
             <img src="./img/antidiary.jpg"></img>
@@ -75,8 +91,8 @@
             <p>Samsung and Rihanna collaborated together to launch her newest album and creative endeavor - ANTI. Together with R/GA, an award-winning digital agency, and Punchdrunk, the creative minds behind Sleep No More, 72andSunny made ANTIdiaRy - an immersive mobile experience and 8-part video series based on Rihanna’s creative legacy.</p>
             <p>ANTIdiaRy earned dozens of press mentions (like Fuse, Billboard, Elle, and Vibe) as well as thousands of mobile site visitors and a Silver Clio Award.</p>
           </div>
-        </article>
-        <article class="project strategy">
+        </div>
+        <div class="project strategy">
           <h2>‘Lebron Uninterrupted’ Creative Campaign (2015)</h2>
           <div class="project-image">
             <img src="./img/lebron.jpg"></img>
@@ -87,8 +103,8 @@
             <h3 class="category">Strategy</h3>
             <p>Samsung worked with Lebron James to launch the Gear VR (a virtual reality headset) along with exclusive Lebron VR content. We created a TV spot that showed what Lebron’s hometown, Cleveland, meant to his work ethic. It went on to win a Bronze Clio Award.</p>
           </div>
-        </article>
-        <article class="project research design">
+        </div>
+        <div class="project research design">
           <h2>‘Hall of Futures’ Exhibit</h2>
           <div class="project-image">
             <img src="./img/hall.jpg"></img>
@@ -99,8 +115,8 @@
             <h3 class="category">Research, Design</h3>
             <p>The Design Anthropological Futures Conference invited me to create an exhibit and workshop in Copenhagen, Denmark during their academic conference. My three-room exhibit, called "Hall of Futures," helped design and anthropology practitioners explore future career choices.</p>
           </div>
-        </article>
-        <article class="project research design innovation">
+        </div>
+        <div class="project research design innovation">
           <h2>‘Department for Communicative Beings and Things’ Exhibit (2014)</h2>
           <div class="project-image">
             <img src="./img/dept.jpg"></img>
@@ -112,8 +128,8 @@
             <h3 class="category">Research, Design, Innovation</h3>
             <p>The Extrapolation Factory, a Brooklyn-based speculative design studio, was invited by the Canadian Centre for Architecture in Montreal, Canada to create a speculative exhibit and workshop for the Centre's fall programming. For the exhibit, we invented a fictional "ministry" in a speculative future ruled by the Internet of Things. Visiting participants registered lobbying groups on behalf of newly communicative things - toasters, cars, etc. and designed bumper stickers to promote their interests.</p>
           </div>
-        </article>
-        <article class="project research design innovation strategy">
+        </div>
+        <div class="project research design innovation strategy">
           <h2>‘The Futures Arcade’ Transdisciplinary Design MFA Thesis (2014)</h2>
           <div class="project-image">
             <img src="./img/futuresarcade.png"></img>
@@ -124,8 +140,8 @@
             <h3 class="category">Research, Design, Innovation, Strategy</h3>
             <p>The Futures Arcade was a graduate thesis project co-designed by Liz Blasi, Min Chung, and myself. During the last year of our Transdisciplinary Design master's program, we worked with educators, students, design practitioners, and college counselors to explore how students think about their future. By focusing on skill development, college financial planning, and career exploration, we designed a set of strategies to help young people through these difficult decisions.</p>
           </div>
-        </article>
-        <article class="project research innovation">
+        </div>
+        <div class="project research innovation">
           <h2>‘The Maker’s Manual’ Trends Report (2014)</h2>
           <div class="project-image">
             <img src="./img/makers.jpg"></img>
@@ -137,20 +153,8 @@
             <h3 class="category">Research, Innovation</h3>
             <p>PSFK, a trends consultancy and editorial platform, collaborated with Intel to create The Maker's Manual. The comprehensive trends report examined the future of maker culture in America. I worked with a small team to identify, analyze, and report on trends shaping the maker community. The published report helped Intel connect more deeply to makers and provided greater understanding on this emerging category.</p>
           </div>
-        </article>
-        <article class="project research innovation strategy">
-          <h2>‘Digital Youth and Intellectual Property’ Research Program (2013)</h2>
-          <div class="project-image">
-            <img src="./img/digitalyouth.png"></img>
-          </div>
-          <div class="project-detail">
-            <h3><span class="project-label">Client:</span> Ford Foundation</h3>
-            <h3><span class="project-label">Role:</span> Lead Researcher</h3>
-            <h3 class="category">Research, Innovation, Strategy</h3>
-            <p>The Ford Foundation created a fellowship that invited graduate students across India, China, and the US to collaborate on original research projects. I led a small field research team across four cities in India and China to learn how local youth explored questions of digital piracy, ownership, and intellectual property.</p>
-          </div>
-        </article>
-        <article class="project design research innovation strategy">
+        </div>
+        <div class="project design research innovation strategy">
           <h2>Teaching Engagements (2013-2016)</h2>
           <div class="project-image">
             <img id="parsons" src="./img/parsons.jpg"></img>
@@ -179,7 +183,7 @@
               <p class="course-description">This small graduate seminar explored how highly creative communities within design, architecture, and fashion formed. Students analyzed the shared traits and catalysts that developed major creative movements across disciplines.</p>
             </article>
           </div>
-        </article>
+        </div>
       </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>

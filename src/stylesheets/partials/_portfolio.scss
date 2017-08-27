@@ -3,40 +3,35 @@
   padding-top: 10px;
 }
 
-.filters {
-  padding-top: 20px;
-  list-style-type: none;
+.sticky-filter-container {
   text-align: center;
-  padding-left: 0px;
+  width: 100%;
+  z-index: 100;
+  padding: 10px;
+}
+
+button.filter {
+  width: 120px;
+  height: 30px;
+  margin: 10px;
   font-family: $body-font;
   cursor: pointer;
+  border: 2px solid $light-gray;
+  border-radius: 5px;
+  font-size: 18px;
+  color: $light-gray;
+  background-color: white;
+  outline: 0;
+}
 
-  li {
-    text-decoration: none;
-    border: 2px solid $light-gray;
-    border-radius: 1000px;
-    background-color: white;
-    width: 120px;
-    padding: 5px;
-    margin-right: 25px;
-    margin-bottom: 10px;
-    display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px;
-    color: $light-gray;
-    font-size: 18px;
-    // box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  }
-
-  li.active {
-    background-color: $gold;
-    color: white;
-    border: none;
-  }
+button.active {
+  background-color: $gold;
+  border: none;
+  color: white;
 }
 
 .project {
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   width: 90%;
   margin-left: 5%;
@@ -133,10 +128,18 @@
   font-size: 18px;
 }
 
-
 @media screen and (max-width: 1130px) {
   .course {
     width: 45%;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  button.filter {
+    width: 90px;
+    height: 25px;
+    margin: 5px;
+    font-size: 14px;
   }
 }
 
@@ -149,5 +152,13 @@
   }
   #parsons {
     margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  button.filter {
+    width: 70px;
+    height: 25px;
+    font-size: 12px;
   }
 }
